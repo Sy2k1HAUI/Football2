@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  display: block;
+}
+/* background-image: linear-gradient(to right top, #ecaacf, #ffa9b5, #ffb196,
+ #f9c07d, #d8d377, #a9d883, #71da9d, #00d8c0, #00c7e3, #00afff, #0090ff, #625ffb); */
+#main {
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://thumbs.dreamstime.com/b/night-stadium-arena-soccer-field-d-render-57408871.jpg")
+    top center / cover no-repeat;
+}
+.heading {
+  color: azure;
+  text-align: center;
+}
+.heading .Org {
+  margin-bottom: 12px;
+  font-size: 28px;
+}
+.heading .title {
+  margin-bottom: 12px;
+}
+.grid-title {
+  margin-top: 40px;
+}
+.grid,
+.grid-title {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-gap: 0 50px;
+  margin-bottom: 4px;
+}
+.changeCol {
+  grid-template-columns: 1fr !important;
+}
+.teams,
+.leagues {
+  background-color: rgba(108, 33, 248, 0.5);
+  padding: 12px 0;
+  text-align: center;
+  border-bottom: 3px solid #ccc;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 24px;
+  color: azure;
+}
+.content-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 10px;
+}
+.content-left-item,
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  font-size: 18px;
+  padding: 16px;
+  height: 57px !important;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(182, 167, 167);
+}
+.team {
+  margin-top: 8px;
+}
+.content-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0px 30px;
+  color: azure;
+  height: 390px !important;
+}
+.content-right-item {
+  position: relative;
+  text-align: center;
+  padding: 8px 30px 8px 30px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 1px solid rgb(182, 167, 167);
+  border-top: 3px solid #ccc;
+}
+.league-name {
+  padding: 8px 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: rgb(56, 87, 88);
+}
+
+.btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit,
+#changeLO {
+  margin-right: 8px;
+  color: #fff;
+  padding: 8px 24px;
+  border: none;
+  outline: none;
+  left: 37%;
+  font-size: 18px;
+  border-radius: 2px;
+  background-color: cadetblue;
+}
+#changeLO {
+  display: none;
+}
+
+#submit:hover,
+#changeLO:hover {
+  cursor: pointer;
+  color: brown;
+  transition: all 0.3s ease-in-out;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.show {
+  display: flex;
+}
+.loader {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.modal_content {
+  width: 200px;
+  height: 100px;
+  background-color: rgba(163, 150, 133, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  animation: show ease-in-out 0.6s;
+}
+.modal_content p {
+  color: #fff;
+  margin-bottom: 8px;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal_content-title {
+  margin-bottom: 30px;
+}
+
+.confirm-btn {
+  border: none;
+  outline: none;
+  background-color: cadetblue;
+  border-radius: 4px;
+  padding: 8px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  margin: 0 auto;
+}
+
+.confirm-btn:hover {
+  color: white;
+}
